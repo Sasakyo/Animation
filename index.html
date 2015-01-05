@@ -4,14 +4,92 @@
 		<title>Animation Reboot</title>
 		<meta charset="UTF-8" />
 		<link rel="stylesheet" href="_styles/styles.css" />
+
 	</head>
 	<body>
 		<h1>1ère animation</h1>
-		<button class="push">Push</button>
+		<p>Le bouton se rapproche du doigt quand on appuie dessus.</p>
+		<div class="mobile">
+			<button class="push">Push</button>
+		</div>
 		<h1>2ème animation</h1>
-		<button ><div class="refresh"></div></button>
+		<p>Le refresh tourne quand on appuie dessus.</p>
+		<div class="mobile">
+			<button ><div class="refresh"></div></button>
+	    </div>
+		
+	    <h1>3ème animation</h1>
+	    <p>Le rectangle part sur le côté quand on veut avoir des détails sur ce qu'il y a dans le groupe (dans le but de laisser la place à la fenêtre de détail).</p>
+	    <div class="mobile">
 
 
+		    <div class="anim_4">
+			    <p class="an_4_txt">préparation pour la s7.</p>
+			    <button class="an_4_btn">plus de détails</button>
+		    </div>
+
+	    </div>
+
+	    <h1>4ème animation</h1>
+	    <p>La couleur du fond change quand on appuie sur un des boutons, cela montre qu'on change de page.</p>
+		<div class="mobile">
+			<div class="background">
+				<button class="left"></button>
+				<button class="right"></button>
+			</div>
+		</div>
+		<h1>5ème animation</h1>
+		<p>Quand un groupe est plein, le fond du rectangle contenant l'information + le texte perdent leur couleur pour être toujours visible mais qu'on comprenne au premier coup d'oeil que le groupe n'est pas sélectionnable.</p>
+		<div class="mobile">
+	        <header>
+	            
+	        </header>
+	        <main>
+
+				<ul>
+				 	<li class="result"> <p> il y a <span> 0 </span> incrit / 5 </p> </li>
+				 	<li><button class="inscription">inscrit toi !</button></li>
+				</ul>
+
+	        </main>
+	        <footer></footer>
+        </div>
+
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script src="_js/jquery-1.11.1.min.js"></script>
+        <script src="http://www.bitstorm.org/jquery/color-animation/jquery.animate-colors-min.js"></script>
+		<script src="_js/js.js"></script>
+
+        
+        <script>
+            var left = document.getElementsByClassName("left"),
+			   right = document.getElementsByClassName("right"),
+			   main = document.getElementsByClassName("background");
+			
+
+			  left[0].addEventListener("click", function() {
+			  	main[0].classList.add("background--left");
+			  	main[0].classList.remove("background--right");
+			    
+			  });
+			  right[0].addEventListener("click", function() {
+			  	main[0].classList.add("background--right");
+			  	main[0].classList.remove("background--left");
+			    
+			  });
+
+
+            var slide = document.getElementsByClassName("an_4_btn"),
+                pouf = document.getElementsByClassName("anim_4");
+
+                slide[0].addEventListener("click", function() {
+                	pouf[0].classList.add("slide");
+                })
+
+
+        </script>
 
 			
 	</body>

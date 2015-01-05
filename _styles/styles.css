@@ -1,5 +1,19 @@
+body {
+	padding: 0;
+	margin: 0;
+	background: #CCFFFF;
+}
+.mobile {
+	width: 230px;
+	height: 400px;
+	background: #ccc;
+	overflow: hidden;
+	margin: 0 auto;
+	
+}
 .push{
 	
+	margin: 80% auto;
 	-moz-box-shadow: 2px 1px 7px 1px black;
 	-webkit-box-shadow: 2px 1px 7px 1px black;
 	box-shadow: 2px 1px 7px 1px black;
@@ -8,7 +22,7 @@
 	-webkit-border-radius:6px;
 	border-radius:6px;
 	border:none;
-	display:inline-block;
+	display:block;
 	color:#ffffff;
 	font-family:arial;
 	font-size:17px;
@@ -27,10 +41,10 @@
 	-webkit-border-radius:6px;
 	border-radius:6px;
 	border:1px solid #18ab29;
-	display:inline-block;
+	display:block;
 	color:#ffffff;
 	font-family:arial;
-	font-size:17px;
+	font-size:23px;
 	padding:20px 35px;
 	text-decoration:none;
 
@@ -43,16 +57,146 @@
      height: 100px;
      padding: 0;
      transition: all .4s ease-out;
-
-
-
 }
-
+/*********** Animation numéro 2 *********************/
 .refresh:active {
-    -moz-transform:rotate(360deg);
-    -webkit-transform:rotate(360deg);
-    -webkit-animation-fill-mode: forwards;
-    
+    -webkit-animation: rotate 1s infinite linear;
+}
+
+@-webkit-keyframes rotate
+{
+    from {
+        -webkit-transform:rotate(0deg);
+    }
+    to {
+        -webkit-transform:rotate(-360deg);
+    }
+}
+h1 {
+	margin: 30px auto;
+	text-align: center;
+}
+p {
+	text-align: center;
+}
+
+.background {
+	height: 100%;
+	background: blue;
+	transition: all .3s ease-in-out;
+}
+
+.left {
+	height: 50px;
+	width: 50%;
+    float: left;
+    background: yellow;
+    margin: 0;
+    padding: 0;
+
+}
+.right {
+	height: 50px;
+	width: 50%;
+    float: right;
+    background: red;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+	border: none;
+}
+.background--left {
+	background: pink;
+}
+.background--right{
+	background: green;
 }
 
 
+footer,header{
+    height: 50px;
+    background: #bbb;
+    line-height: 50px;
+    font-size: 25px;
+    z-index: 99999999;
+}
+
+main {
+height:380px;
+
+position: relative;
+display: block;
+background: #eee;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+	height: 350px;
+	overflow-y: scroll;
+}
+
+li{
+	list-style: none;
+	height: 50px;
+	width: 100%;
+	background: #aaa;
+	position: relative;
+}
+.result{
+
+	background: #009999;
+	transition: all .3s ease-in-out;
+}
+
+a{
+	display: block;
+	text-align: center;
+	line-height: 50px;
+	text-decoration: none;
+	position: relative;
+}
+
+.inscription{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50% ,-50%);
+    width:auto;
+    padding:8px 0;
+    text-align:center;
+    display: inline-block;
+    margin:0 8px 0 0;
+    border-radius:7px;
+    font-size: 0.85em;
+    width:120px;
+    color:#000;
+
+}
+
+
+.off {
+	background: #E0E0E0;
+}
+
+.anim_4 {
+	height: 25%;
+	background: white;
+	transition: all .4s ease-in-out;
+
+}
+.an_4_txt {
+	text-align: center;
+}
+.an_4_btn {
+	margin: 0 auto;
+	background: #bada55;
+	padding: 5px;
+
+}
+
+.slide {
+    transform: translateX(101%);
+}
